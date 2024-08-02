@@ -15,7 +15,7 @@ describe('Test Dummy Store', () => {
   
   describe('actions', () => {
     describe('getMessage()', () => {
-      it("should return 'This is a mock string'", () => {
+      it("should return 'This is a mock text.'", () => {
       
         const store = useDummyStore();
 
