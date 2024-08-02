@@ -1,16 +1,19 @@
-export class Functions {
-  private static instance: Functions;
+export class MyFunctions {
+  private static instance: MyFunctions;
+  private status: string;
 
-  private constructor() {}
-
-  public static getInstance(): Functions {
-    if (!Functions.instance) {
-      Functions.instance = new Functions();
-    }
-    return Functions.instance;
+  private constructor() {
+    this.status = "ok";
   }
 
-  public _getMessage = () => {
+  public static getInstance(): MyFunctions {
+    if (!MyFunctions.instance) {
+      MyFunctions.instance = new MyFunctions();
+    }
+    return MyFunctions.instance;
+  }
+
+  public getMessage(): string {
     return 'This is a static text.';
-  };
+  }
 }
