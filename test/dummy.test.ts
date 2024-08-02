@@ -1,10 +1,10 @@
 import { createPinia, setActivePinia } from 'pinia';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { createApp } from 'vue';
-import { MyPiniaPlugin } from './plugins/myPiniaPlugin';
-import { useDummyStore } from './dummy';
+import { MyPiniaPlugin } from '../src/store/plugins/myPiniaPlugin';
+import { useDummyStore } from '../src/store/dummy';
 
-describe('Test Store', () => {
+describe('Test Dummy Store', () => {
   const app = createApp({});
   beforeEach(() => {
     const pinia = createPinia().use(MyPiniaPlugin);
